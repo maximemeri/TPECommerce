@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  	<display-name>tpecommerce</display-name>
+  	<welcome-file-list>
+    	<welcome-file>dashboard</welcome-file>
+  	</welcome-file-list>
+  
+  	<error-page>
+		<error-code>500</error-code>
+		<location>/error.jsp</location>
+	</error-page>
+  	
+  	<servlet>
+    	<description></description>
+    	<servlet-name>FournisseurServlet</servlet-name>
+    	<servlet-class>com.epsi.tpecommerce.controller.FournisseurServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>FournisseurServlet</servlet-name>
+    	<url-pattern>/fournisseur</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+    	<description></description>
+    	<servlet-name>AccueilServlet</servlet-name>
+    	<servlet-class>com.epsi.tpecommerce.controller.AccueilServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>AccueilServlet</servlet-name>
+    	<url-pattern>/dashboard</url-pattern>
+  	</servlet-mapping>
+</web-app>
